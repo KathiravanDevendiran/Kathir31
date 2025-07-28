@@ -1,0 +1,410 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kathiravan Devendiran | Portfolio</title>
+  <meta name="description" content="Web Developer, AI Enthusiast & Mentor - Kathiravan Devendiran's Portfolio">
+  <meta name="keywords" content="web developer, AI, machine learning, portfolio, kathiravan">
+  <meta property="og:title" content="Kathiravan Devendiran | Portfolio">
+  <meta property="og:description" content="Web Developer, AI Enthusiast & Mentor">
+  <meta property="og:image" content="certificates/WhatsApp Image 2025-07-28 at 21.45.09_f56109b5.jpg">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans" tabindex="0">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50">Skip to main content</a>
+  
+  <!-- High Contrast Toggle -->
+  <button id="contrastToggle" class="fixed top-4 left-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors z-40" aria-label="Toggle high contrast mode">
+    <span>🔆</span>
+  </button>
+  
+  <!-- Voice Navigation Button -->
+  <button id="voiceToggle" class="fixed top-16 left-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors z-40" aria-label="Toggle voice navigation">
+    <span id="voiceIcon">🎤</span>
+  </button>
+  <header class="bg-white shadow-md p-6 text-center relative" role="banner">
+    <button id="darkModeToggle" class="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" aria-label="Toggle dark mode">
+      <span class="dark-mode-icon">🌙</span>
+    </button>
+    <div class="flex flex-col items-center mb-4">
+      <img src="certificates/WhatsApp Image 2025-07-28 at 21.45.09_f56109b5.jpg" alt="Kathiravan Devendiran" class="w-48 h-48 rounded-full object-cover object-top border-4 border-blue-500 shadow-lg mb-4 hover:scale-105 transition-transform">
+      <h1 class="text-3xl font-bold">Kathiravan Devendiran</h1>
+    </div>
+    <p class="text-gray-600 mt-2"><span id="typed-text"></span></p>
+    <nav class="mt-4 space-x-4" role="navigation" aria-label="Main navigation">
+      <a href="about.html" class="text-blue-600 hover:underline transition-colors">About</a>
+      <a href="projects.html" class="text-blue-600 hover:underline transition-colors">Projects</a>
+      <a href="skills.html" class="text-blue-600 hover:underline transition-colors">Skills</a>
+      <a href="certificates.html" class="text-blue-600 hover:underline transition-colors">Certificates</a>
+      <a href="contact.html" class="text-blue-600 hover:underline transition-colors">Contact</a>
+      <a href="blog.html" class="text-blue-600 hover:underline transition-colors">Blog</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="max-w-3xl mx-auto p-6 space-y-10" role="main">
+    <section class="card text-center">
+      <h2 class="text-2xl font-semibold mb-4">Welcome to My Portfolio</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Explore my work, skills, and achievements through the navigation above.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="about.html" class="bg-blue-600 text-white p-6 rounded-xl hover:bg-blue-700 transition-colors transform hover:scale-105">
+          <div class="text-4xl mb-3">👨‍💻</div>
+          <div class="font-semibold text-lg">About Me</div>
+        </a>
+        <a href="projects.html" class="bg-green-600 text-white p-6 rounded-xl hover:bg-green-700 transition-colors transform hover:scale-105">
+          <div class="text-4xl mb-3">🚀</div>
+          <div class="font-semibold text-lg">Projects</div>
+        </a>
+        <a href="skills.html" class="bg-purple-600 text-white p-6 rounded-xl hover:bg-purple-700 transition-colors transform hover:scale-105">
+          <div class="text-4xl mb-3">⚡</div>
+          <div class="font-semibold text-lg">Skills</div>
+        </a>
+        <a href="certificates.html" class="bg-yellow-600 text-white p-6 rounded-xl hover:bg-yellow-700 transition-colors transform hover:scale-105">
+          <div class="text-4xl mb-3">🏆</div>
+          <div class="font-semibold text-lg">Certificates</div>
+        </a>
+        <a href="contact.html" class="bg-red-600 text-white p-6 rounded-xl hover:bg-red-700 transition-colors transform hover:scale-105">
+          <div class="text-4xl mb-3">📧</div>
+          <div class="font-semibold text-lg">Contact</div>
+        </a>
+        <a href="blog.html" class="bg-indigo-600 text-white p-6 rounded-xl hover:bg-indigo-700 transition-colors transform hover:scale-105">
+          <div class="text-4xl mb-3">📝</div>
+          <div class="font-semibold text-lg">Blog</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- GitHub Contribution Graph -->
+    <section class="card text-center">
+      <h2 class="text-2xl font-semibold mb-4">GitHub Activity</h2>
+      <div class="bg-white p-4 rounded-lg shadow-sm">
+        <img src="https://ghchart.rshah.org/kathiravan" alt="GitHub contribution graph" class="w-full max-w-2xl mx-auto">
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="card">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Achievements & Awards</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white p-4 rounded-lg">
+          <div class="text-2xl mb-2">🏆</div>
+          <h3 class="font-semibold">Best Project Award</h3>
+          <p class="text-sm opacity-90">AI Innovation Challenge 2024</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-400 to-blue-600 text-white p-4 rounded-lg">
+          <div class="text-2xl mb-2">⭐</div>
+          <h3 class="font-semibold">GitHub Stars</h3>
+          <p class="text-sm opacity-90">500+ stars across projects</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="card">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Worked With</h2>
+      <div class="flex justify-center items-center space-x-8 flex-wrap gap-4">
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:scale-105 transition-transform">
+          OneYes Infotech Solutions
+        </div>
+        <div class="bg-gradient-to-r from-green-500 to-teal-600 text-white px-6 py-3 rounded-lg font-bold text-lg shadow-lg hover:scale-105 transition-transform">
+          CORIZO
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Quick Stats</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center" role="region" aria-label="Portfolio statistics">
+        <div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+          <div class="text-2xl font-bold text-blue-600 dark:text-blue-400" id="projectCount">0</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+        </div>
+        <div class="p-4 bg-green-50 dark:bg-green-900 rounded-lg">
+          <div class="text-2xl font-bold text-green-600 dark:text-green-400" id="skillCount">0</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Skills</div>
+        </div>
+        <div class="p-4 bg-yellow-50 dark:bg-yellow-900 rounded-lg">
+          <div class="text-2xl font-bold text-yellow-600 dark:text-yellow-400" id="certCount">0</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Certificates</div>
+        </div>
+        <div class="p-4 bg-purple-50 dark:bg-purple-900 rounded-lg">
+          <div class="text-2xl font-bold text-purple-600 dark:text-purple-400" id="expYears">0</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Years Exp</div>
+        </div>
+      </div>
+    </section>
+    <!-- Social Proof Section -->
+    <section class="card">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Social Proof</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="p-4 bg-gray-100 rounded-lg">
+          <div class="text-xl font-bold text-gray-700">500+</div>
+          <div class="text-sm text-gray-600">GitHub Stars</div>
+        </div>
+        <div class="p-4 bg-gray-100 rounded-lg">
+          <div class="text-xl font-bold text-gray-700">1.2K</div>
+          <div class="text-sm text-gray-600">Downloads</div>
+        </div>
+        <div class="p-4 bg-gray-100 rounded-lg">
+          <div class="text-xl font-bold text-gray-700">50+</div>
+          <div class="text-sm text-gray-600">Contributors</div>
+        </div>
+        <div class="p-4 bg-gray-100 rounded-lg">
+          <div class="text-xl font-bold text-gray-700">95%</div>
+          <div class="text-sm text-gray-600">Satisfaction</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="chatWidget" class="fixed bottom-4 right-4 z-50">
+    <button id="chatToggle" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors" aria-label="Open chat widget">
+      💬
+    </button>
+    <div id="chatBox" class="hidden absolute bottom-16 right-0 w-80 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-xl border">
+      <div class="p-4 bg-blue-600 text-white rounded-t-lg">
+        <h3 class="font-semibold">Chat with me!</h3>
+      </div>
+      <div class="p-4 h-64 overflow-y-auto" id="chatMessages">
+        <div class="text-gray-600 dark:text-gray-400">Hi! How can I help you?</div>
+      </div>
+      <div class="p-4 border-t">
+        <input type="text" id="chatInput" placeholder="Type a message..." class="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600" aria-label="Chat message input">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Typing animation
+    const typed = new Typed('#typed-text', {
+      strings: ['Web Developer', 'AI Enthusiast', 'Mentor', 'Problem Solver'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const html = document.getElementById('html-root');
+    const darkModeIcon = document.querySelector('.dark-mode-icon');
+    
+    darkModeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      darkModeIcon.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+    });
+    
+    // Load dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      html.classList.add('dark');
+      darkModeIcon.textContent = '☀️';
+    }
+
+    // Animate counters
+    function animateCounter(id, target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        document.getElementById(id).textContent = Math.floor(current);
+      }, 30);
+    }
+    
+    // Start animations when page loads
+    window.addEventListener('load', () => {
+      animateCounter('projectCount', 3);
+      animateCounter('skillCount', 15);
+      animateCounter('certCount', 2);
+      animateCounter('expYears', 2);
+    });
+
+    // Chat widget
+    const chatToggle = document.getElementById('chatToggle');
+    const chatBox = document.getElementById('chatBox');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+    
+    chatToggle.addEventListener('click', () => {
+      chatBox.classList.toggle('hidden');
+    });
+    
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && chatInput.value.trim()) {
+        const message = chatInput.value.trim();
+        chatMessages.innerHTML += `<div class="mb-2 text-right"><span class="bg-blue-600 text-white px-3 py-1 rounded-lg inline-block">${message}</span></div>`;
+        chatInput.value = '';
+        
+        // Auto response
+        setTimeout(() => {
+          chatMessages.innerHTML += `<div class="mb-2"><span class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-lg inline-block">Thanks for your message! I'll get back to you soon.</span></div>`;
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1000);
+        
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    });
+
+    // Mobile Touch Gestures
+    const hammer = new Hammer(document.body);
+    hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    
+    hammer.on('swipeleft', () => {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const pages = ['index.html', 'about.html', 'projects.html', 'skills.html', 'certificates.html', 'contact.html', 'blog.html'];
+      const currentIndex = pages.indexOf(currentPage);
+      if (currentIndex < pages.length - 1) {
+        window.location.href = pages[currentIndex + 1];
+      }
+    });
+    
+    hammer.on('swiperight', () => {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const pages = ['index.html', 'about.html', 'projects.html', 'skills.html', 'certificates.html', 'contact.html', 'blog.html'];
+      const currentIndex = pages.indexOf(currentPage);
+      if (currentIndex > 0) {
+        window.location.href = pages[currentIndex - 1];
+      }
+    });
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.altKey) {
+        switch(e.key) {
+          case '1': window.location.href = 'index.html'; break;
+          case '2': window.location.href = 'about.html'; break;
+          case '3': window.location.href = 'projects.html'; break;
+          case '4': window.location.href = 'skills.html'; break;
+          case '5': window.location.href = 'certificates.html'; break;
+          case '6': window.location.href = 'contact.html'; break;
+          case '7': window.location.href = 'blog.html'; break;
+          case 'd': darkModeToggle.click(); break;
+          case 'c': document.getElementById('chatToggle').click(); break;
+        }
+      }
+    });
+
+    // High Contrast Mode
+    const contrastToggle = document.getElementById('contrastToggle');
+    contrastToggle.addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+      localStorage.setItem('highContrast', document.body.classList.contains('high-contrast'));
+    });
+    
+    if (localStorage.getItem('highContrast') === 'true') {
+      document.body.classList.add('high-contrast');
+    }
+
+    // Voice Navigation
+    let recognition;
+    const voiceToggle = document.getElementById('voiceToggle');
+    const voiceIcon = document.getElementById('voiceIcon');
+    let isListening = false;
+    
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+      
+      recognition.onresult = (event) => {
+        const command = event.results[0][0].transcript.toLowerCase();
+        
+        if (command.includes('home')) window.location.href = 'index.html';
+        else if (command.includes('about')) window.location.href = 'about.html';
+        else if (command.includes('projects')) window.location.href = 'projects.html';
+        else if (command.includes('skills')) window.location.href = 'skills.html';
+        else if (command.includes('certificates')) window.location.href = 'certificates.html';
+        else if (command.includes('contact')) window.location.href = 'contact.html';
+        else if (command.includes('blog')) window.location.href = 'blog.html';
+        else if (command.includes('dark mode')) darkModeToggle.click();
+        else if (command.includes('chat')) document.getElementById('chatToggle').click();
+      };
+      
+      recognition.onend = () => {
+        isListening = false;
+        voiceIcon.textContent = '🎤';
+      };
+      
+      voiceToggle.addEventListener('click', () => {
+        if (isListening) {
+          recognition.stop();
+        } else {
+          recognition.start();
+          isListening = true;
+          voiceIcon.textContent = '🔴';
+        }
+      });
+    } else {
+      voiceToggle.style.display = 'none';
+    }
+
+    // Focus management for accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+    
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+    });
+  </script>
+  
+  <style>
+    /* High Contrast Mode */
+    .high-contrast {
+      filter: contrast(150%) brightness(120%);
+    }
+    
+    /* Screen Reader Only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .focus\:not-sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+    
+    /* Keyboard Navigation Focus */
+    .keyboard-navigation *:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
+    
+    /* Touch-friendly buttons */
+    @media (max-width: 768px) {
+      button, a {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
+  </style>
+</body>
+</html>

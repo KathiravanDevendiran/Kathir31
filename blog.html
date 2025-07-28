@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Kathiravan Devendiran</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow-md p-6 text-center relative">
+    <button id="darkModeToggle" class="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+      <span class="dark-mode-icon">🌙</span>
+    </button>
+    <h1 class="text-3xl font-bold">My Blog</h1>
+    <nav class="mt-4 space-x-4">
+      <a href="index.html" class="text-blue-600 hover:underline">Home</a>
+      <a href="about.html" class="text-blue-600 hover:underline">About</a>
+      <a href="projects.html" class="text-blue-600 hover:underline">Projects</a>
+      <a href="skills.html" class="text-blue-600 hover:underline">Skills</a>
+      <a href="certificates.html" class="text-blue-600 hover:underline">Certificates</a>
+      <a href="contact.html" class="text-blue-600 hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6 space-y-6">
+    <section class="card">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold">Latest Articles</h2>
+        <input type="text" id="searchInput" placeholder="Search articles..." class="px-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+      </div>
+      
+      <div class="grid gap-6" id="blogPosts">
+        <article class="border-l-4 border-blue-500 pl-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <div class="flex items-center gap-4 mb-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">Jan 15, 2024</span>
+            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs">Web Development</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 hover:text-blue-600 cursor-pointer">Getting Started with Modern Web Development</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-3">Exploring the latest trends and technologies in web development, from React to AI integration...</p>
+          <a href="#" class="text-blue-600 hover:underline">Read more →</a>
+        </article>
+
+        <article class="border-l-4 border-green-500 pl-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <div class="flex items-center gap-4 mb-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">Jan 10, 2024</span>
+            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded-full text-xs">AI & ML</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 hover:text-blue-600 cursor-pointer">The Future of AI in Web Development</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-3">How artificial intelligence is revolutionizing the way we build and interact with websites...</p>
+          <a href="#" class="text-blue-600 hover:underline">Read more →</a>
+        </article>
+
+        <article class="border-l-4 border-purple-500 pl-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <div class="flex items-center gap-4 mb-2">
+            <span class="text-sm text-gray-500 dark:text-gray-400">Jan 5, 2024</span>
+            <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">Career</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 hover:text-blue-600 cursor-pointer">My Journey as a Web Developer</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-3">Sharing my experiences, challenges, and lessons learned in my web development career...</p>
+          <a href="#" class="text-blue-600 hover:underline">Read more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="text-2xl font-semibold mb-4">Categories</h2>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-800">Web Development</span>
+        <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-green-200 dark:hover:bg-green-800">AI & ML</span>
+        <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-purple-200 dark:hover:bg-purple-800">Career</span>
+        <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-yellow-200 dark:hover:bg-yellow-800">Tutorials</span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const html = document.getElementById('html-root');
+    const darkModeIcon = document.querySelector('.dark-mode-icon');
+    
+    darkModeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      darkModeIcon.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
+    });
+    
+    // Load dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      html.classList.add('dark');
+      darkModeIcon.textContent = '☀️';
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const blogPosts = document.getElementById('blogPosts');
+    
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      const articles = blogPosts.querySelectorAll('article');
+      
+      articles.forEach(article => {
+        const title = article.querySelector('h3').textContent.toLowerCase();
+        const content = article.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || content.includes(searchTerm)) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
